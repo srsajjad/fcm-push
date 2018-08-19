@@ -1,4 +1,14 @@
-// import firebase from 'firebase'
+console.log('Service Worker Loaded...')
+
+self.addEventListener('push', e => {
+  console.log('i am here')
+  console.log('e', e)
+  // const data = e.data.json()
+  console.log('Push Received...')
+  self.registration.showNotification('A Title', {
+    body: 'Muhahaha'
+  })
+})
 
 // importScripts('https://www.gstatic.com/firebasejs/5.4.0/firebase-app.js')
 // importScripts('https://www.gstatic.com/firebasejs/5.4.0/firebase-messaging.js')

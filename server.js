@@ -4,7 +4,7 @@ require('dotenv').config()
 var key = process.env.SERVER_KEY
 
 var to =
-  'fMGNs1587wA:APA91bGzbUUn4rf7jymnjb63n2WH8yO1vyilK_eNsZtphhIphWrofZcQnjYkzD38yOMIhYVDMmwf2r_C7H4mNHpfvKbvus8e_wOUoMxxPQXB8sgRyuAe9EDUQLSIjqDFSAshsL8oCrn4'
+  'fW2qPKDF4DY:APA91bFpA7vvs3BiruyZJXt64VAwJyG5dANJ-C1Jq2YgEPR16DKiNEEJ2NfO1bYo4tAsH3ZNW29NcHxHHjogtKEFZ3VgjMUvg_pxmgfaYzfRalvrFgQl5mm0BmkP-w-N3wnOxPYpPXCY'
 var notification = {
   title: 'Testing Push Notification',
   body: 'Fuck Yes'

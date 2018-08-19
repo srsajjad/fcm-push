@@ -17,16 +17,14 @@ firebase.initializeApp(config)
 ;(async function () {
   try {
     let messaging = firebase.messaging()
+    let reg = await window.navigator.serviceWorker.register('sw.js')
+    // console.log('registration object', reg)
+    messaging.useServiceWorker(reg)
     await messaging.requestPermission()
-    console.log('have permission')
+    console.log('Permission Granted')
     let token = await messaging.getToken()
-    console.log('token', token)
-
-    // messaging.onMessage(function (payload) {
-    //   console.log('onMessage', payload)
-    // })
-
-    messaging.onMessage(payload => console.log('payload', payload))
+    console.log('generated token', token)
+    messaging.onMessage(payload => console.log('got payload', payload))
   } catch (e) {
     console.log('error occured', e)
   }
