@@ -13,6 +13,17 @@ var config = {
   storageBucket: 'notify-me-97726.appspot.com',
   messagingSenderId: '1018271508394'
 }
+
+// var config = {
+//   apiKey: "AIzaSyB9JYbMCo8fEeVrFELJ6BP9jIcRnXrr2Qg",
+//   authDomain: "shophobetest.firebaseapp.com",
+//   databaseURL: "https://shophobetest.firebaseio.com",
+//   projectId: "shophobetest",
+//   storageBucket: "shophobetest.appspot.com",
+//   messagingSenderId: "235304038910"
+// }
+
+
 firebase.initializeApp(config)
 ;(async function () {
   try {
@@ -21,11 +32,6 @@ firebase.initializeApp(config)
     console.log('have permission')
     let token = await messaging.getToken()
     console.log('token', token)
-
-    // messaging.onMessage(function (payload) {
-    //   console.log('onMessage', payload)
-    // })
-
     messaging.onMessage(payload => console.log('payload', payload))
   } catch (e) {
     console.log('error occured', e)
