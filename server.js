@@ -1,9 +1,8 @@
 let fetch = require('isomorphic-unfetch')
 require('dotenv').config()
 
-var to =
-  'fIAp47PgPzw:APA91bHHtvSiKSvwMuXgyvUq_7Pz8DrMPnqwmzNCmNTlwgP8UKHMI19yakbw_Jw06Y3xAIG-mIVXpVr2m53J96SI99vLKst78P1oa6Mmt7UjhXA_gWrOtASl9Pw-W32Hk9e9jzM25rjV'
-var key = process.env.SERVER_KEY
+let key = process.env.SERVER_KEY
+let to =  browserGeneratedToken || ''
 
 
 fetch('https://fcm.googleapis.com/fcm/send', {
